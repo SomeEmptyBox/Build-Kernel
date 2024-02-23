@@ -56,7 +56,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
-        git clone --depth 1 https://github.com/Nicklas373/aosp-clang.git -b r412851 clang-aosp/
+        wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/tags/android-12.0.0_r34/clang-r416183b1.tar.gz
+        tar -C clang-aosp/ -zxvf clang-r416183b1.tar.gz
 
     - name: Download GCC-AOSP
       run: |
